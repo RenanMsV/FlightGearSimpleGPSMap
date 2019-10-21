@@ -5,6 +5,7 @@ var alpha = 1;
 var zoom = 14;
 var gps_map = "nil";
 var bright = 1;
+var gps_path = split("/GPS.nas", getprop("/nasal/gps/file"))[0];
 
 var types = [
 	{
@@ -80,7 +81,7 @@ var show_map = func (){
 
   # simple aircraft icon at current position/center of the map
 
-  var filename = "Aircraft/R66/Instruments-3d/RenanGPSMap/svg/boeingAirplane.svg";
+  var filename = gps_path ~ "/svg/boeingAirplane.svg";
   var airplane_symbol = ui_root.createChild('group');
   canvas.parsesvg(airplane_symbol, filename);
   airplane_symbol.getElementById("path3783").setColor(1,0,0);
@@ -90,7 +91,7 @@ var show_map = func (){
 
   airplane_symbol.setScale(.5);
 
-  var filename = "Aircraft/R66/Instruments-3d/RenanGPSMap/svg/gpslayout.svg";
+  var filename = gps_path ~ "/svg/gpslayout.svg";
   var gpslayout = ui_root.createChild('group');
   canvas.parsesvg(gpslayout, filename);
   #gpslayout.getElementById("path3783").setColor(1,0,0);
