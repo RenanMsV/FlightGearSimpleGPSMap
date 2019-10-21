@@ -22,7 +22,7 @@ A simple 3D GPS instrument (aka tablet) for FlightGear Flight Simulator
   ```xml
   <nasal>
 	<gps>
-      <file>Aircraft/Mil-Mi-8/Models/Interior/Cockpit/FlightGearSimpleGPSMap/GPS.nas</file>
+      <file>Aircraft/737/Models/FlightGearSimpleGPSMap/GPS.nas</file>
     </gps>
   </nasal>
   ```
